@@ -9,7 +9,7 @@
     tools:showIn="@layout/activity_league_table">
 
     <android.support.v7.widget.RecyclerView
-        android:id = "@+id/standings_recyclerview"
+        android:id = "@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
