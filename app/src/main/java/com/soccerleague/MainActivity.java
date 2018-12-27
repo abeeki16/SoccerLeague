@@ -35,6 +35,33 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button laLiga = (Button)findViewById(R.id.la_liga);
+        laLiga.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LeagueTable.class);
+                intent.putExtra("LeagueName","PD");
+                startActivity(intent);
+            }
+        });
+
+        Button ligue1 = (Button)findViewById(R.id.ligue_1);
+        ligue1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LeagueTable.class);
+                intent.putExtra("LeagueName","FL1");
+                startActivity(intent);
+            }
+        });
+
+        Button serieA = (Button)findViewById(R.id.serie_a);
+        serieA.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LeagueTable.class);
+                intent.putExtra("LeagueName","SA");
+                startActivity(intent);
+            }
+
+        });
     }
 
     @Override

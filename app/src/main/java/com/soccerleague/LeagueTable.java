@@ -1,5 +1,6 @@
 package com.soccerleague;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -38,6 +39,9 @@ public class LeagueTable extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Intent intent = getIntent();
+        String leagueName = intent.getStringExtra("LeagueName");
+
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -45,13 +49,13 @@ public class LeagueTable extends AppCompatActivity {
         mTeamList = new ArrayList<>();
 
         mRequestQueue = Volley.newRequestQueue(this);
-        parseJSON();
+        parseJSON(leagueName);
 
     }
 
-    private void parseJSON() {
+    private void parseJSON(String leagueName) {
         String url = "http://api.football-data.org/v2/competitions/";
-        url += "PL";
+        url += leagueName;
         url += "/standings";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
