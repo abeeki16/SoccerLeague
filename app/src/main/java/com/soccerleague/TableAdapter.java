@@ -36,7 +36,7 @@ public class TableAdapter extends RecyclerView.Adapter<TableAdapter.TeamViewHold
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mTeamList.size();
     }
 
     public class TeamViewHolder extends RecyclerView.ViewHolder {

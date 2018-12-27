@@ -1,15 +1,15 @@
 package com.soccerleague;
 
 public class Team {
-    private int mStanding;
+    private String mStanding;
     private String mName;
 
-    public Team(int mStanding, String mName) {
+    public Team(String mStanding, String mName) {
         this.mStanding = mStanding;
         this.mName = mName;
     }
 
-    public int getStanding() {
+    public String getStanding() {
         return mStanding;
     }
 

@@ -21,7 +21,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <include
-        android:id="@+id/PremierLeague"
+        android:id="@+id/context_layout"
         layout="@layout/content_main" />
 
     <android.support.design.widget.FloatingActionButton

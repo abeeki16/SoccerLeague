@@ -26,20 +26,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
-        final Button englishPremierLeague = findViewById(R.id.PremierLeague);
+        Button englishPremierLeague = (Button)findViewById(R.id.PremierLeague);
         englishPremierLeague.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), LeagueTable.class);
                 intent.putExtra("LeagueName","PL");
+                startActivity(intent);
             }
         });
     }
